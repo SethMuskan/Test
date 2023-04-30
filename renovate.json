@@ -8,7 +8,7 @@
       "datasourceTemplate": "kubernetes-api",
       "regexManagers": [
         {
-          "fileMatch": ["**/*.yaml"],
+          "fileMatch": ["template/*.yaml"],
           "matchStrings": [
             "apiVersion:\\s*(\\S*)\\s*"
           ],
