@@ -18,8 +18,7 @@
         "apiVersion:\\s*v1beta\\d*\\s*#\\s*DEPRECATED",
         "apiVersion:\\s*v1alpha\\d*\\s*#\\s*DEPRECATED"
       ],
-      "datasourceTemplate": "helm",
-      "label": "deprecated-api-version"
+      "datasourceTemplate": "helm"
     }
   ]
 }
