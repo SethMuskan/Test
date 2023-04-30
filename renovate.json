@@ -15,8 +15,7 @@
     {
       "fileMatch": ["^template/.*\\.yaml$"],
       "matchStrings": [
-        "apiVersion:\\s*v1beta\\d*\\s*#\\s*DEPRECATED",
-        "apiVersion:\\s*v1alpha\\d*\\s*#\\s*DEPRECATED"
+        "apiVersion: apps/v1beta2"
       ],
       "currentValueTemplate": "v1beta2",
       "depNameTemplate": "Kubernetes",
