@@ -2,9 +2,9 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
+      "matchPackagePatterns": ["helm:*"],
+      "matchDepTypes": ["helm"],
       "groupName": "helm-charts",
-      "schedule": "* * * * *",
       "labels": [
         "dependencies",
         "helm"
@@ -13,13 +13,13 @@
   ],
   "regexManagers": [
     {
-      "description": "Updating Helm chart versions",
-      "fileMatch": ["^template\\/values\\.yaml$"],
+      "fileMatch": ["^templates/.*\\.yaml$"],
       "matchStrings": [
-          "version: (?<currentValue>.*?) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)\\s"
+        "apiVersion:\\s*v1beta\\d*\\s*#\\s*DEPRECATED",
+        "apiVersion:\\s*v1alpha\\d*\\s*#\\s*DEPRECATED"
       ],
-      "matchStringsStrategy": "any",
-      "datasourceTemplate": "helm"
+      "datasourceTemplate": "helm",
+      "label": "deprecated-api-version"
     }
   ]
 }
