@@ -44,7 +44,7 @@
         "!v0.1.0",
         "!v0.0.0"
       ],
-      "schedule": "daily",
+      "schedule": "0 0 * * *",
       "groupName": "helm-charts",
       "labels": [
         "dependencies",
