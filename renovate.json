@@ -12,8 +12,8 @@
             "apiVersion:\\s*(\\S*)\\s*"
           ],
           "matchStringsStrategy": "all",
-          "currentValueTemplate": "{{match}}",
-          "depNameTemplate": "{{match}}",
+          "currentValueTemplate": "apps/v1beta2",
+          "depNameTemplate": "Deployment",
           "datasourceTemplate": "kubernetes-api",
           "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
         }
