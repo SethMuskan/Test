@@ -2,8 +2,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["helm:*"],
-      "matchDepTypes": ["helm"],
+      "matchPackagePatterns": ["*"],
       "groupName": "helm-charts",
       "schedule": "* * * * *",
       "labels": [
