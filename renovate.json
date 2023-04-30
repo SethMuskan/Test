@@ -20,7 +20,7 @@
       ],
       "currentValueTemplate": "v1beta2",
       "depNameTemplate": "Kubernetes",
-      "replaceString": "apiVersion: v1",
+      "autoReplaceStringTemplate": "apiVersion: v1",
       "regexFlags": "g",
       "datasourceTemplate": "helm"
     }
