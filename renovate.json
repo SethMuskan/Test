@@ -1,8 +1,28 @@
 {
   "extends": ["config:base"],
-      "kubernetes":
+  "packageRules": [
+    {
+      "packagePatterns": ["kubernetes"],
+      "groupName": "kubernetes-api-deprecation",
+      "datasourceTemplate": "kubernetes-api",
+      "regexManagers": [
         {
           "fileMatch": ["template/*.yaml"],
-          "datasourceTemplate": "kubernetes-api"
+          "matchStrings": [
+            "apiVersion:\\s*(\\S*)\\s*"
+          ],
+          "matchStringsStrategy": "all",
+          "currentValueTemplate": "{{match}}",
+          "depNameTemplate": "{{match}}",
+          "datasourceTemplate": "kubernetes-api",
+          "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
         }
+      ]
+    }
+  ],
+  "kubernetes":
+   {
+     "fileMatch": ["template/*.yaml"],
+     "datasourceTemplate": "kubernetes-api"
+    }
 }
