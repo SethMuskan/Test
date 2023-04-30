@@ -2,7 +2,7 @@
   "extends": ["config:base"],
   "regexManagers": [
     {
-      "fileMatch": ["template/.+\\.yaml$"],
+      "fileMatch": ["*.yaml"],
       "matchStrings": [
         "apiVersion: *"
       ],
