@@ -2,10 +2,8 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "packagePatterns": ["helm:*"],
-      "depTypeList": ["helm"],
-      "automerge": false,
-      "schedule": "* * * * *",
+      "matchPackagePatterns": ["helm:*"],
+      "matchDepTypes": ["helm"],
       "groupName": "helm-charts",
       "labels": [
         "dependencies",
