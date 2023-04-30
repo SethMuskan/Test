@@ -1,13 +1,9 @@
 {
   "extends": ["config:base"],
-  "packageRules": [
-    {
       "kubernetes": [
         {
           "fileMatch": ["template/*.yaml"],
           "datasourceTemplate": "kubernetes-api"
         }
       ]
-    }
-  ]
 }
