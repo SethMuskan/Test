@@ -18,6 +18,10 @@
         "apiVersion:\\s*v1beta\\d*\\s*#\\s*DEPRECATED",
         "apiVersion:\\s*v1alpha\\d*\\s*#\\s*DEPRECATED"
       ],
+      "currentValueTemplate": "v1beta2",
+      "depNameTemplate": "Kubernetes",
+      "replaceString": "apiVersion: v1",
+      "regexFlags": "g",
       "datasourceTemplate": "helm"
     }
   ]
