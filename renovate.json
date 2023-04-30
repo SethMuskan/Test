@@ -14,8 +14,7 @@
         "minor",
         "patch",
         "pin"
-      ],
-      "allowMajorUpdates": false
+      ]
     }
   ],
   "helm": {
