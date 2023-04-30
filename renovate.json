@@ -2,14 +2,15 @@
   "extends": ["config:base"],
   "regexManagers": [
     {
-      "fileMatch": ["template/deployment.yaml"],
+      "fileMatch": ["**/*.yaml"],
       "matchStrings": [
-        "apiVersion: apps/v1beta2"
+        "apiVersion: .*"
       ],
-      "currentValueTemplate": "v1beta2",
-      "depNameTemplate": "Kubernetes",
-      "autoReplaceStringTemplate": "apiVersion: v1",
-      "datasourceTemplate": "helm"
+      "datasourceTemplate": "kubernetes-api",
+      "depNameTemplate": "{{match}}"
     }
+  ],
+  "labels": [
+    "renovate"
   ]
 }
