@@ -21,7 +21,6 @@
       "currentValueTemplate": "v1beta2",
       "depNameTemplate": "Kubernetes",
       "autoReplaceStringTemplate": "apiVersion: v1",
-      "regexFlags": "g",
       "datasourceTemplate": "helm"
     }
   ]
