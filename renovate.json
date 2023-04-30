@@ -2,7 +2,7 @@
   "extends": ["config:base"],
   "regexManagers": [
     {
-      "fileMatch": ["template/deployment.yaml],
+      "fileMatch": ["template/deployment.yaml"],
       "matchStrings": [
         "apiVersion: apps/v1beta2"
       ],
