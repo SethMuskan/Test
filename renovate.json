@@ -5,6 +5,7 @@
       "matchPackagePatterns": ["helm:*"],
       "matchDepTypes": ["helm"],
       "groupName": "helm-charts",
+      "schedule": "* * * * *"
       "labels": [
         "dependencies",
         "helm"
