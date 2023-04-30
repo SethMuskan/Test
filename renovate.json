@@ -1,16 +1,5 @@
 {
   "extends": ["config:base"],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["helm:*"],
-      "matchDepTypes": ["helm"],
-      "groupName": "helm-charts",
-      "labels": [
-        "dependencies",
-        "helm"
-      ]
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": ["^template/.*\\.yaml$"],
