@@ -11,5 +11,16 @@
         "helm"
       ]
     }
+  ],
+  "regexManagers": [
+    {
+      "description": "Updating Helm chart versions",
+      "fileMatch": ["^template\\/values\\.yaml$"],
+      "matchStrings": [
+          "version: (?<currentValue>.*?) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)\\s"
+      ],
+      "matchStringsStrategy": "any",
+      "datasourceTemplate": "helm"
+    }
   ]
 }
