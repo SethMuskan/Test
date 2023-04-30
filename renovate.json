@@ -1,17 +1,23 @@
 {
   "extends": ["config:base"],
-  "regexManagers": [
+  "packageRules": [
     {
-      "fileMatch": ["template/*.yaml"],
-      "matchStrings": [
-        "apiVersion: *"
-      ],
+      "packagePatterns": ["kubernetes"],
+      "upgradeTo": "latest",
+      "groupName": "kubernetes-api-deprecation",
       "datasourceTemplate": "kubernetes-api",
-      "currentValueTemplate": "apiVersion: {{value}}",
-      "depNameTemplate": "{{match}}"
+      "regexManagers": [
+        {
+          "fileMatch": ["**/*.yaml"],
+          "matchStrings": [
+            "apiVersion:\\s*(\\S*)\\s*"
+          ],
+          "matchStringsStrategy": "all",
+          "currentValueTemplate": "{{match}}",
+          "depNameTemplate": "{{match}}",
+          "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
+        }
+      ]
     }
-  ],
-  "labels": [
-    "renovate"
   ]
 }
