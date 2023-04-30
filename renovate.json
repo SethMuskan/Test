@@ -3,7 +3,6 @@
   "packageRules": [
     {
       "packagePatterns": ["kubernetes"],
-      "upgradeTo": "latest",
       "groupName": "kubernetes-api-deprecation",
       "datasourceTemplate": "kubernetes-api",
       "regexManagers": [
