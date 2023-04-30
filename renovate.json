@@ -7,7 +7,7 @@
         "apiVersion: .*"
       ],
       "datasourceTemplate": "kubernetes-api",
-      "currentValueTemplate": "apiVersion: apps/v1beta2",
+      "currentValueTemplate": "apiVersion: {{value}}",
       "depNameTemplate": "{{match}}"
     }
   ],
