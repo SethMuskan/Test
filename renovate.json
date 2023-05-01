@@ -2,7 +2,7 @@
   "extends": ["config:base"],
   "kubernetes": {
     "fileMatch": ["\\.yaml$"],
-    "dataSourceTemplate": "kubernetes-api",
+    "datasourceTemplate": "kubernetes-api",
     "versioining": "kubernetes-api"
   }
 }
