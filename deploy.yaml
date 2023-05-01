@@ -1,2 +1,2 @@
-apiVersion: discovery.k8s.io/v1beta1
-kind: EndpointSlice
+apiVersion: apps/v1beta2
+kind: Deployment
