@@ -1,16 +1,9 @@
 {
   "extends": ["config:base"],
-      "regexManagers": [
-        {
-          "fileMatch": ["deploy.yaml"],
-          "matchStrings": [
-            "apiVersion:\\s*(\\S*)\\s*"
-          ],
-          "matchStringsStrategy": "all",
-          "currentValueTemplate": "{{match}}",
-          "depNameTemplate": "{{match}}",
-          "datasourceTemplate": "kubernetes-api",
-          "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
-        }
-  ]
+  "kubernetes": {
+    "fileMatch": ["\\.yaml$"],
+    "dataSourceTemplate": "kubernetes-api",
+    "versioining": "kubernetes-api"
+  }
+}
 }
