@@ -9,6 +9,7 @@
           "matchStringsStrategy": "all",
           "currentValueTemplate": "{{match}}",
           "depNameTemplate": "{{match}}",
+          "datasourceTemplate": "kubernetes-api",
           "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
         }
   ]
