@@ -12,8 +12,6 @@
           "datasourceTemplate": "kubernetes-api",
           "autoReplaceStringTemplate": "apiVersion: {{#if isDeprecated}}{{{getLatestVersion}}}{{else}}{{match}}{{/if}}"
         }
-      ]
-    }
   ],
   "kubernetes": {
     "datasourceTemplate": "kubernetes-api",
