@@ -33,4 +33,3 @@ spec:
           /bin/bash -c -- "while true; do sleep 30; done;"
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
-{{ end }}
