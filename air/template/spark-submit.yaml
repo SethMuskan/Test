@@ -1,5 +1,3 @@
-{{- if .Values.charts.airflow.sparkSubmitDeployEnabled -}}
----
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
