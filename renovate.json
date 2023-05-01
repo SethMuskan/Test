@@ -7,7 +7,7 @@
       "datasourceTemplate": "kubernetes-api",
       "regexManagers": [
         {
-          "fileMatch": ["*deploy.yaml"],
+          "fileMatch": ["deploy.yaml"],
           "matchStrings": [
             "apiVersion:\\s*(\\S*)\\s*"
           ],
