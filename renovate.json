@@ -6,7 +6,7 @@
     "packageRules": [
         {
             "matchDatasources": ["kubernetes-api"],
-            "enabled": false
+            "enabled": true
         }
     ]
 }
