@@ -3,6 +3,6 @@
   "kubernetes": {
     "fileMatch": ["\\.yaml$"],
     "datasourceTemplate": "kubernetes-api",
-    "versioining": "kubernetes-api"
+    "versioning": "kubernetes-api"
   }
 }
