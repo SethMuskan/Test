@@ -1,5 +1,5 @@
-apiVersion: apps/v1alpha2
-kind: Deployment
+apiVersion: discovery.k8s.io/v1beta1
+kind: EndpointSlice
 metadata:
   name: {{ include "hello-world.fullname" . }}
   labels:
