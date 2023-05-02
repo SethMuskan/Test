@@ -1,7 +1,7 @@
 {{- if .Values.service.enabled -}}
 ---
 apiVersion: v1beta2
-kind: Service
+kind: Deployment
 metadata:
   name: {{ .Release.Name }}
   {{- if .Values.environment }}
