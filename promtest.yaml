@@ -1,2 +1,7 @@
-apiVersion: monitoring.coreos.com/v1
-kind: Prometheus
+apiVersion: v1beta2
+kind: Namespace
+metadata:
+  name: test
+  labels:
+    istio-operator-managed: Reconcile
+    istio-injection: disabled
