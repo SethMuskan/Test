@@ -933,7 +933,7 @@ workers:
   ##           averageUtilization: 80
   ##
   autoscaling:
-    enabled: false
+    enabled: true
     maxReplicas: 2
     metrics: []
 
