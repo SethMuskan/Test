@@ -1,0 +1,20 @@
+cloudProvider: undef
+        
+charts:
+  airflow:
+    enabled: true
+    namespace: workflow-management
+    chart: airflow
+    outputValues: "airflow"
+    repo: https://airflow-helm.github.io/charts
+    version: 8.6.1 # renovate: datasource=helm depName=airflow registryUrl=https://airflow-helm.github.io/charts
+    valuesFile: "values/airflow-values.yaml"
+    sparkSubmitDeployEnabled: false
+    artifactoryDagsEnabled: false
+    celeryKubernetesExecutor: false
+    celeryExecutor: false
+    artifactoryUrl: "https://repo.mgnt.in:443/artifactory"
+    syncWave: 1
+    keda:
+      enabled: false
+      advanced: {}
