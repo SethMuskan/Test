@@ -1,4 +1,4 @@
-{{- if .Values.service.enabled -}}
+{{- if .Values.service.enabled }}
 ---
 apiVersion: v1beta2
 kind: Deployment
@@ -15,4 +15,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 9376
-{{ end }}
+{{- end }}
