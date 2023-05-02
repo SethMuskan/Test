@@ -1,0 +1,4 @@
+airflow:
+  image:
+    repository: apache/airflow
+    tag: 2.4.3-python3.8
