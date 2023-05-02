@@ -1,0 +1,9 @@
+replicaCount: 1
+chart:
+  service:
+    enabled: true
+image:
+  repository: nginx
+  tag: 1.21.6
+  pullPolicy: Always
+environment: uat
