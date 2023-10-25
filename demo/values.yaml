@@ -3,6 +3,6 @@ service:
   enabled: true
 image:
   repository: nginx
-  tag: 1.24.0
+  tag: 1.25.3
   pullPolicy: Always
 environment: uat
